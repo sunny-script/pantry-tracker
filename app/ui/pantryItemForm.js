@@ -1,69 +1,77 @@
-// Form component for adding/editing items
+import Header from "./header";
 
-import { useState } from "react";
+export default function PantryItemForm() {
+  return (
+    <div className="bg-[#a3c236] min-h-screen text-[#1c1f0a]">
 
-export default function PantryItemForm({ onAdd }) {
-    const [form, setForm] = useState({
-        name: "",
-        category: "",
-        quantity: "",
-        status: "",
-        lastUsed: "",
-        Expires: "",
-    });
+      {/* Form Section */}
+      <main className="flex flex-col items-center justify-center px-4 sm:px-8 pt-20">
+        <div className="bg-black bg-opacity-60 text-white p-8 rounded-lg shadow-lg w-full max-w-lg">
+          <h1 className="text-3xl font-[family-name:var(--font-playfair-display)] mb-4">
+            Add Pantry Item
+          </h1>
+          <form className="flex flex-col gap-4">
+            {/* Item Name */}
+            <label className="flex flex-col">
+              <span className="text-lg">Item Name</span>
+              <input
+                type="text"
+                placeholder="Enter item name"
+                className="p-2 rounded-md border border-[#1c1f0a] text-[#1c1f0a] shadow-inner"
+              />
+            </label>
 
-const handleSubmit = (e) => {
-    e.preventDefault();
-    onAdd(form);
-    setForm({
-        name: "",
-        category: "",
-        quantity: "",
-        status: "",
-        lastUsed: "",
-        Expires: "",
-    });
-};
+            {/* Status */}
+            <label className="flex flex-col">
+              <span className="text-lg">Status</span>
+              <select className="p-2 rounded-md border border-[#1c1f0a] text-[#1c1f0a] shadow-inner">
+                <option value="low">Low</option>
+                <option value="moderate">Moderate</option>
+                <option value="excess">Excess</option>
+              </select>
+            </label>
 
-return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-        <input
-            type="text"
-            placeholder="Item name"
-            value={form.name}
-            onChange={(e) => setForm({ ...form, name: e.target.value })}
-        />
-        <input
-            type="text"
-            placeholder="How would you categorize this item?"
-            value={form.category}
-            onChange={(e) => setForm({ ...form, category: e.target.value })}
-        />
-        <input
-            type="text"
-            placeholder="How many of this item do you have on hand"
-            value={form.quantity}
-            onChange={(e) => setForm({ ...form, quantity: e.target.value })}
-        />
-        <input
-            type="text"
-            placeholder="Do you need to buy more of this item?"
-            value={form.status}
-            onChange={(e) => setForm({ ...form, status: e.target.value })}
-        />
-        <input
-            type="text"
-            placeholder="Last time you used this item?"
-            value={form.lastUsed}
-            onChange={(e) => setForm({ ...form, lastUsed: e.target.value })}
-        />
-        <input
-            type="text"
-            placeholder="Last but not least, expiration date?"
-            value={form.Expires}
-            onChange={(e) => setForm({ ...form, Expires: e.target.value })}
-        />
-        <button type="submit">Add Item to your virtual shelf</button>
-    </form>
-);      
+            {/* Category */}
+            <label className="flex flex-col">
+              <span className="text-lg">Category</span>
+              <select className="p-2 rounded-md border border-[#1c1f0a] text-[#1c1f0a] shadow-inner">
+                <option value="fruit">Fruit</option>
+                <option value="vegetable">Vegetable</option>
+                <option value="canned">Canned</option>
+                <option value="grains">Grains</option>
+                <option value="other">Other</option>
+              </select>
+            </label>
+
+            {/* Last Used */}
+            <label className="flex flex-col">
+              <span className="text-lg">Last Used</span>
+              <input
+                type="date"
+                className="p-2 rounded-md border border-[#1c1f0a] text-[#1c1f0a] shadow-inner"
+              />
+            </label>
+
+            {/* Expiration Date */}
+            <label className="flex flex-col">
+              <span className="text-lg">Expiration Date</span>
+              <input
+                type="date"
+                className="p-2 rounded-md border border-[#1c1f0a] text-[#1c1f0a] shadow-inner"
+              />
+            </label>
+
+            {/* Submit Button */}
+            <button
+              type="submit"
+              className="bg-[#a3c236] hover:bg-[#d9f150] text-[#1c1f0a] font-semibold rounded-xl px-6 py-3 shadow-md transition-all"
+            >
+              Add Item
+            </button>
+          </form>
+        </div>
+      </main>
+    </div>
+  );
 }
+

@@ -1,91 +1,43 @@
 import Image from "next/image";
+import Link from "next/link";
+import Header from "./ui/header";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[10px_1fr_10px] items-center justify-items-center min-h-screen p-8 pb-20 gap-2 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-4 row-start-2 items-center sm:items-start">
+    <div className="relative min-h-screen flex items-center justify-center text-center bg-[#c8ba9f]">
+      {/* Header */}
+      <Header />
+
+      {/* Full-Screen Image */}
+      <div className="absolute inset-0 z-0">
         <Image
-          className="dark:invert"
-          src="/shelfLifeLogo.png"
-          alt="Shelf Life logo"
-          width={360}
-          height={76}
+          src="/welcome_page_image.png"
+          alt="Welcome Page Background"
+          layout="fill"
+          objectFit="cover"
           priority
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by creating your list - of spices, fruits, condiments, breads, or beans. Don't forget beans.{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-            </code>
-          </li>
-          <li>Plan your meals and shopping lists accordingly! </li>
-        </ol>
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Get started!
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+      {/* Transparent Box with Content */}
+      <div className="relative z-10 bg-[#1c1f0a] bg-opacity-80 text-white p-8 rounded-lg shadow-lg flex flex-col items-center gap-4 max-w-lg">
+
+        {/* Instructions */}
+        <h1 className="text-3xl font-[family-name:var(--font-playfair-display)]">
+          Welcome to PantryPro!
+        </h1>
+        <p className="text-lg font-[family-name:var(--font-nunito)] max-w-md">
+        Made for those who forget what they have on hand. Easily organize and reference your spices, fruits, veggies, and cans-of-who-knows-what.
+        </p>
+
+        {/* Get Started Button */}
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="/pantry"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/pantryPage"
+          className="bg-[#a3c236] hover:bg-[#d9f150] text-[#1c1f0a] font-semibold rounded-xl px-6 py-3 shadow-md transition-all"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
+          Get started
         </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
     </div>
   );
 }

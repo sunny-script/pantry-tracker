@@ -14,8 +14,20 @@
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-nunito);
+    background-color: #c8ba9f;
+    color: #1c1f0a;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  button, a {
+    border-radius: 12px; /* Soften edges */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
