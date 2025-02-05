@@ -97,7 +97,7 @@ export default function PantryTable({ items, onDelete, onEdit, statusFilter, set
               ))
             ) : (
               <tr>
-                <td colSpan="4" className="text-center py-4 text-gray-300">
+                <td colSpan="4" className="text-center py-4 text-white">
                   No pantry items yet.
                 </td>
               </tr>
