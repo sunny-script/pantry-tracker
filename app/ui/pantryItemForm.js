@@ -2,7 +2,7 @@ import Header from "./header";
 
 export default function PantryItemForm() {
   return (
-    <div className="bg-[#a3c236] min-h-screen text-[#1c1f0a]">
+    <div className="bg-[#ecf794] min-h-screen text-[#1c1f0a]">
 
       {/* Form Section */}
       <main className="flex flex-col items-center justify-center px-4 sm:px-8 pt-20">
@@ -42,25 +42,6 @@ export default function PantryItemForm() {
                 <option value="other">Other</option>
               </select>
             </label>
-
-            {/* Last Used */}
-            <label className="flex flex-col">
-              <span className="text-lg">Last Used</span>
-              <input
-                type="date"
-                className="p-2 rounded-md border border-[#1c1f0a] text-[#1c1f0a] shadow-inner"
-              />
-            </label>
-
-            {/* Expiration Date */}
-            <label className="flex flex-col">
-              <span className="text-lg">Expiration Date</span>
-              <input
-                type="date"
-                className="p-2 rounded-md border border-[#1c1f0a] text-[#1c1f0a] shadow-inner"
-              />
-            </label>
-
             {/* Submit Button */}
             <button
               type="submit"

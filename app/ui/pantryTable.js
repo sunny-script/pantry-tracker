@@ -12,8 +12,6 @@ export default function PantryTable({ items, onDelete, onUpdate }) {
             <th className="border border-[#1c1f0a] p-2">Name</th>
             <th className="border border-[#1c1f0a] p-2">Status</th>
             <th className="border border-[#1c1f0a] p-2">Category</th>
-            <th className="border border-[#1c1f0a] p-2">Last Used</th>
-            <th className="border border-[#1c1f0a] p-2">Expires</th>
             <th className="border border-[#1c1f0a] p-2">Actions</th>
           </tr>
         </thead>
@@ -23,8 +21,6 @@ export default function PantryTable({ items, onDelete, onUpdate }) {
               <td className="border border-[#1c1f0a] p-2">{item.name}</td>
               <td className="border border-[#1c1f0a] p-2">{item.status}</td>
               <td className="border border-[#1c1f0a] p-2">{item.category}</td>
-              <td className="border border-[#1c1f0a] p-2">{item.lastUsed}</td>
-              <td className="border border-[#1c1f0a] p-2">{item.expires}</td>
               <td className="border border-[#1c1f0a] p-2">
                 <button
                   onClick={() => onUpdate(index)}
