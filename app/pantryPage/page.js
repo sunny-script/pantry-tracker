@@ -91,6 +91,8 @@ export default function PantryPage() {
             items={filteredItems}
             onDelete={handleDeleteItem}
             onEdit={handleEditItem}
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
             statusFilter={statusFilter}
             setStatusFilter={setStatusFilter}
             categoryFilter={categoryFilter}
