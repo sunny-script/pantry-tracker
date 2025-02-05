@@ -1,4 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Pantry Tracker
+
+A sleek and intuitive pantry management app that helps users **track, organize, and manage** their pantry items efficiently. Designed with a modern UI and simple local storage for easy use.
+
+## Deployment
+Deployed with Vercel, check it out! 
+
+[PantryPro](https://pantry-tracker-six.vercel.app/)
+
+## Features
+
+**Add Pantry Items** – Input item name, select status (Low, Moderate, Excess), and choose a category.  
+**Local Storage** – Saves pantry items so they persist after refreshing.  
+**Search & Filters** – Search by name, filter by status or category.  
+**Edit & Delete** – Modify or remove pantry items directly in the table.  
+**Modern UI** – Styled using Tailwind CSS for a clean and professional look.  
+
+## Future Features
+- Authentication
+- Database via Prisma
+- Customize your own categories and tables
+- Tags for items
+- Update table display to your liking
+- Interactive for the fun of it (animated fruit will wiggle when hovered over)
+- Prompts to review or shop for low items
+- Connection to recipes and recipe database to prompt meal prep
+
+## Preview
+Landing page
+![Landing page](image.png)
+Pantry page
+![Pantry page](image-1.png)
+Branding
+![Welcome Image](welcome_page_image.png)
+![PantryPro logo](pantry_pro_logo.png)
+![Colors and Fonts Key](<Colors and Fonts Key.png>)
+
+## 🛠️ Tech Stack
+- **Frontend:** Next.js (React), Tailwind CSS
+- **State Management:** useState, useEffect
+- **Data Persistence:** Local Storage
+
+## 🏗️ Installation & Setup
+### **Clone the Repository**
+```sh
+git clone https://github.com/yourusername/pantry-tracker.git
+cd pantry-tracker
+
 
 ## Getting Started
 
@@ -20,17 +67,7 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Contact
+Reach out to Parker with questions or suggestions:
+[Parker Mikesell](https://github.com/sunny-script)
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
